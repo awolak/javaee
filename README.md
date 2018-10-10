@@ -1,3 +1,3 @@
-#Technologie Java Enterprise
+Technologie Java Enterprise
 
 Alicja Wolak 246784
