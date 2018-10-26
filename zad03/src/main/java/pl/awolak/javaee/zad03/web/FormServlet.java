@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/beds")
-public class Beds extends HttpServlet {
+public class FormServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -30,7 +30,7 @@ public class Beds extends HttpServlet {
 
 		List<Bed> allBeds = ss.getAllBeds();
 
-		out.append("<html><body><h2>All Beds:</h2>");
+		out.append("<html><body><h2>Beds:</h2>");
 
 		for (Bed bed: allBeds) {
 			out.append("<p>Name: " + bed.getName() + "</p>");
