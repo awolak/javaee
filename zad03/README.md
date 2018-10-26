@@ -1,1 +1,3 @@
-Zadanie 3 JavaEE: Stwórz sklep internetowy na zadany temat, w tym wypadku szafy.
+# Zadanie 3
+
+Bed store - PROJEKT NIE JEST SKOŃCZONY
