@@ -58,7 +58,7 @@ public class AllBedsServlet extends HttpServlet {
 			out.append("<p>Name: " + bed.getName() + "</p>");
 			out.append("<p>Production date: " + bed.getProductionDate() + "</p>");
 			out.append("<p>Width: " + bed.getWidth() + "</p>");
-			out.append("<p>Is wood: " + bed.isSoftStatus() + "</p><br>");
+			out.append("<p>Is soft: " + bed.isSoftStatus() + "</p><br>");
 		}
 
 		out.append("</body></html>");
