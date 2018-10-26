@@ -21,7 +21,7 @@ public class IndexServlet extends HttpServlet {
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
-        out.println("<html><body><h1>Bed store</h1> <br>" +
+        out.println("<html><body><h1>Welcome to out bed store</h1> <br>" +
                 "Menu: <br>" +
                 "<ul>" +
                 "<li><a href='add-bed'>Add Bed</a></li>" +
