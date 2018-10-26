@@ -34,7 +34,15 @@ public class Bed {
     public void setProdutionDate(Date productionDate) {
         this.productionDate = productionDate;
     }
+    
+    public double getwidth() {
+        return width;
+    }
 
+    public void setwidth(double width) {
+        this.width = width;
+    }
+    
     public boolean isSoftStatus() {
         return isSoft;
     }
@@ -43,11 +51,4 @@ public class Bed {
         this.isSoft = isSoft;
     }
 
-    public double getwidth() {
-        return width;
-    }
-
-    public void setwidth(double width) {
-        this.width = width;
-    }
 }
