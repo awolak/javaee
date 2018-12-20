@@ -43,12 +43,13 @@ public class StoreLaceServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		double width = Double.parseDouble(request.getParameter("width"));
+		boolean isColorful = Boolean.parseBoolean(request.getParameter("isColorful"));
 		int price = Integer.parseInt(request.getParameter("price"));
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
 
 		int id = ss.getId();
 
-		Lace newLace = new Lace(id, producer, productionDate, width, price, quantity);
+		Lace newLace = new Lace(id, producer, productionDate, width, price, quantity, isColorful);
 
 		ss.add(newLace);
 
@@ -63,6 +64,7 @@ public class StoreLaceServlet extends HttpServlet {
 			out.append("<p>Combustion: " + lace.getWidth() + "</p>");
 			out.append("<p>Price: " + lace.getPrice() + "</p>");
 			out.append("<p>Quantity: " + lace.getQuantity() + "</p>");
+			out.append("<p>Is colorful: " + lace.getIsColorful() + "</p><br>");
 		}
 
 		out.append("<a href='add-lace'>Add lace</a><br>");

@@ -49,6 +49,7 @@ public class AddToCartServlet extends HttpServlet {
             out.append("<p>Production date: " + lace.getProductionDate() + "</p>");
             out.append("<p>Width: " + lace.getWidth() + "</p>");
             out.append("<p>Price: " + lace.getPrice() + "</p>");
+            out.append("<p>Is colorful: " + lace.getIsColorful() + "</p><br>");
         }
 
         out.append("<a href='all-laces'>Go back to shop</a><br>");

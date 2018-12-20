@@ -28,10 +28,15 @@ public class AddLaceServlet extends HttpServlet {
 				"Width: <input type='text' name='width' /> <br />" +
 				"Price: <input type='text' name='price' /> <br />" +
 				"Quantity: <input type='number' name='quantity' /> <br />" +
+				"Is colorful: <select name='isColorful'>" +
+				"<option value='true'>Yes</option>" +
+				"<option value='false'>No</option>" +
 				"</select><br />" +
 				"<input type='submit' value=' Add ' />" +
 				"</form>" +
 				"</body></html>");
+
+		
 		out.close();
 	}
 

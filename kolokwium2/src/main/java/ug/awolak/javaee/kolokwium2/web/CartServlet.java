@@ -46,6 +46,7 @@ public class CartServlet extends HttpServlet {
             out.append("<p>Production date: " + lace.getProductionDate() + "</p>");
             out.append("<p>Width: " + lace.getWidth() + "</p>");
             out.append("<p>Price: " + lace.getPrice() + "</p>");
+            out.append("<p>Is colorful: " + lace.getIsColorful() + "</p><br>");
 
             total += lace.getPrice();
         }

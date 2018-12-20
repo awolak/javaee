@@ -47,6 +47,7 @@ public class AllLacesServlet extends HttpServlet {
                 out.append("<p>Width: " + lace.getWidth() + "</p>");
                 out.append("<p>Price: " + lace.getPrice() + "</p>");
                 out.append("<p>Quantity: " + lace.getQuantity() + "</p>");
+                out.append("<p>Is colorful: " + lace.getIsColorful() + "</p><br>");
                 out.append("<input type='submit' value=' Add to Cart' />");
                 out.append("</form>");
             }

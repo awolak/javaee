@@ -12,7 +12,7 @@ public class StorageService {
     private List<Lace> cart = new ArrayList<Lace>();
 
     public void add(Lace lace) {
-        Lace newLace = new Lace(lace.getId(), lace.getProducer(), lace.getProductionDate(), lace.getWidth(), lace.getPrice(), lace.getQuantity());
+        Lace newLace = new Lace(lace.getId(), lace.getProducer(), lace.getProductionDate(), lace.getWidth(), lace.getPrice(), lace.getQuantity(), lace.getIsColorful());
         db.add(newLace);
     }
 
