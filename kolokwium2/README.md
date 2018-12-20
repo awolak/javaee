@@ -1,1 +1,3 @@
-Kolokwium 2 - Lace
+# Kolokwium 2 - Lace
+
+date format: dd-mm-yyyy
