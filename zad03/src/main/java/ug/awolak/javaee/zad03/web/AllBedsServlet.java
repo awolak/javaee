@@ -40,6 +40,7 @@ public class AllBedsServlet extends HttpServlet {
         for (Bed bed: allBeds) {
             if(bed.getQuantity() > 0){
                 out.append("<form action='add-to-cart'>");
+                out.append("<input type='hidden' name='id' value='" + bed.getId() + "'/>");
                 out.append("<p>id: " + bed.getId() + "</p>");
                 out.append("<p>Producer: " + bed.getProducer() + "</p>");
                 out.append("<p>Production date: " + bed.getProductionDate() + "</p>");
