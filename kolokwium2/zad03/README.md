@@ -1,1 +1,5 @@
-Poprawa kolokwium1: Domena skarpetki  
+# Poprawa kolokwium
+
+Alicja Wolak 246784
+
+Temat: Lace
