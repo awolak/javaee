@@ -1,2 +1,5 @@
-# restejbjpa
-Demo project for Java EE Technologies course.
+# Projekt javaee
+
+Alicja Wolak 246784
+
+Temat: Bed
