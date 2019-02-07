@@ -65,6 +65,7 @@ public class Producer {
     }
 
     public void setBeds(List<Bed> beds) {
+    	this.beds = beds;
     }
 
 	

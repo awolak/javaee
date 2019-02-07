@@ -80,7 +80,7 @@ public class Bed {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public boolean isSoft() {
+	public boolean getIsSoft() {
 		return isSoft;
 	}
 	public void setIsSoft(boolean isSoft) {
@@ -121,7 +121,7 @@ public class Bed {
         return type;
     }
     
-    public void setTail(Type type) {
+    public void setType(Type type) {
         this.type = type;
     }
     

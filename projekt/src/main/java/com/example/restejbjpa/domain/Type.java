@@ -69,7 +69,7 @@ public class Type {
 		return bed;
 	}
 
-	public void setBird(Bed bed) {
+	public void setBed(Bed bed) {
 		this.bed = bed;
 	}
 }
