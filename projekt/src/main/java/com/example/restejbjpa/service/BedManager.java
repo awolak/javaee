@@ -116,7 +116,7 @@ public class BedManager {
 		return em.find(Producer.class, id);
 	}
 	
-	//znajduje wlasciciela, ktory ma najwiecej ptasich zabawek
+	//znajduje producenta, ktory ma najwiecej poduszek
 		public Producer findManyPillows(){
 			List<Producer> producers = new ArrayList<>();  
 			producers = getAllProducers();
@@ -135,7 +135,7 @@ public class BedManager {
 			return em.find(Producer.class, id);
 		}
 		
-		//znajduje wszystkich wlascicieli, ktorzy maja wiecej niz n zabawek
+		//znajduje wszystkich prodcentow, ktorzy maja wiecej niz n poduszek
 		public List<Producer> findManyPillows(int n){
 			List<Producer> many = new ArrayList<>(); 
 			List<Producer> producers = new ArrayList<>();  

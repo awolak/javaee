@@ -17,84 +17,63 @@ import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
-@NamedQueries({ 
+@NamedQueries({
 	@NamedQuery(name = "bed.all", query = "Select b from Bed b"),
 	@NamedQuery(name = "bed.delete.all", query = "Delete from Bed "),
-	//@NamedQuery(name = "bed.deleteId", query = "Delete b from bed b where b.id = :id "),
+	
 	@NamedQuery(name = "bed.findByCountOfSheets", query = "Select b from Bed b where b.countOfSheets = :countOfSheets")//,
-//	@NamedQuery(name = "bedProducer.findByAthorFirstName",
-//	query = "Select a.firstName, a.lastName, b.title, b.yop from Book b JOIN b.authors a where a.firstName = :name")
-	})
+
+})
+
 @XmlRootElement
 public class Bed {
-
+	
 	private Long id;
 	private String name;
 	private boolean isSoft;
 	private double weight;
-	private String  productionDate;
+	private String productionDate;
 	private int countOfSheets;
+	private List<Producer> producers = new ArrayList<Producer>();
 	private List<Pillow> pillows = new ArrayList<Pillow>();
-    private List<Producer> producers = new ArrayList<Producer>();
-    private Type type;
-	
-	
-	public Bed() {
-		super();
-	}
-
-	public Bed(String name, String productionDate, boolean isSoft, double weight, int countOfSheets) {
-		super();
-		this.name = name;
-		this.isSoft = isSoft;
-		this.weight = weight;
-		this.productionDate = productionDate;
-		this.countOfSheets = countOfSheets;
-	}
-
-	public Bed(Long id, String name, String productionDate, boolean isSoft, double weight, int countOfSheets) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.isSoft = isSoft;
-		this.weight = weight;
-		this.productionDate = productionDate;
-		this.countOfSheets = countOfSheets;
-	}
-	public Bed(String name) {
-		super();
-		this.name = name;
-	}
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public boolean getIsSoft() {
-		return isSoft;
-	}
-	public void setIsSoft(boolean isSoft) {
-		this.isSoft = isSoft;
-	}
-	public double getWeight() {
+ 	private Type type;
+ 	
+ 	
+ 	@Id
+ 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ 	public Long getId() {
+ 		return id;
+ 	}
+ 	
+ 	public void setId(Long id) {
+ 		this.id = id;
+ 	}
+ 	
+ 	public String getName() {
+ 		return name;
+ 	}
+ 	
+ 	public void setName(String name) {
+ 		this.name = name;
+ 	}
+ 	
+ 	public double getWeight() {
 		return weight;
 	}
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+	public boolean getIsSoft(){
+		return isSoft;
+	}
+	public void setIsSoft(boolean isSoft) {
+		this.isSoft = isSoft;
+	}
+	
 	public String getProductionDate() {
 		return productionDate;
 	}
+	
 	public void setProductionDate(String productionDate) {
 		this.productionDate = productionDate;
 	}
@@ -107,66 +86,57 @@ public class Bed {
 		this.countOfSheets = countOfSheets;
 	}
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    public List<Pillow> getPillows() {
-        return pillows;
-    }
-
-    public void setPillows(List<Pillow> pillows) {
-        this.pillows = pillows;
-    }
-	
-    @OneToOne(fetch = FetchType.EAGER)
-    public Type getType() {
-        return type;
-    }
-    
-    public void setType(Type type) {
-        this.type = type;
-    }
-    
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	public List<Producer> getProducers() {
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	public List<Producer> getProducers(){
 		return producers;
 	}
-    
-    public void setProducers(List<Producer> producers) {
+	
+	public void setProducers(List<Producer> producers) {
 		this.producers = producers;
 	}
-
 	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		//result = prime * result + countOfSheets;
-		//result = prime * result + weight;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Bed other = (Bed) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (weight != other.weight)
-			return false;
-		return true;
-	}
-	@Override
-	public String toString() {
-		return "Bed [name=" + name + ", isSoft=" + isSoft + ", weight=" + weight + ", productionDate=" + productionDate
-				+ ", countOfSheets=" + countOfSheets + "]";
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	public List<Pillow> getPillows(){
+		return pillows;
 	}
 	
+	public void setPillows(List<Pillow> Pillows) {
+		this.pillows = pillows;
+	}
+	
+	@OneToOne(fetch = FetchType.EAGER)
+	public Type getType() {
+		return type;
+	}
+	
+	public void setType(Type type)
+	{
+		this.type = type;
+	}
+	
+ 	public Bed() {
+ 		super();
+ 	}
+ 	
+ 	public Bed(String name, String productionDate, boolean isSoft, double weight) {
+ 		super();
+ 		this.name = name;
+ 		this.isSoft = isSoft;
+ 		this.weight = weight;
+ 		this.productionDate = productionDate;
+ 	}
+ 	
+ 	public Bed(Long id,String name, String productionDate, boolean isSoft, double weight) {
+ 		super();
+ 		this.id = id;
+ 		this.name = name;
+ 		this.isSoft = isSoft;
+ 		this.weight = weight;
+ 		this.productionDate = productionDate;
+ 	}
+ 	
+ 	public Bed(String name) {
+ 		super();
+ 		this.name = name;
+ 	}
 }
