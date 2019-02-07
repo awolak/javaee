@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "3a97c29b-7f30-4748-9af5-2a4564423a0d",
+		"name": "zad07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create bed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Bed1\",\n        \"soft\": true,\n        \"weight\": 12.5,\n        \"productionDate\": \"2017-11-11\",\n        \"countOfSheets\": 5\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/bed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"bed"
+					]
+				},
+				"description": "dodaje sam bed "
+			},
+			"response": []
+		},
+		{
+			"name": "create bed with pillows and producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Bed2\",\n        \"soft\": true,\n        \"weight\": 12.5,\n        \"productionDate\": \"2017-11-11\",\n        \"countOfSheets\": 4,\n        \"pillows\":[\n\t        \t{\n\t        \t\t\"name\": \"Blue ball\"\n\t    \t\t},\n\t    \t\t{\n\t        \t\t\"name\": \"Nunchaku\"\n\t    \t\t}\n        \t],\n        \"producers\":[\n\t        \t{\n\t        \t\t\"name\": \"Marcel\"\n\t    \t\t},\n\t    \t\t{\n\t        \t\t\"name\": \"Bazyl\"\n\t    \t\t}\n        \t]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/bed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"bed"
+					]
+				},
+				"description": "dodaje sam bed "
+			},
+			"response": []
+		},
+		{
+			"name": "get all beds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/bed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"bed"
+					]
+				},
+				"description": "Show all beds"
+			},
+			"response": []
+		},
+		{
+			"name": "get all pillows",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"pillow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create pillow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Bed3\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"pillow"
+					]
+				},
+				"description": "create pillow"
+			},
+			"response": []
+		},
+		{
+			"name": "get types",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/type",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Bed3\",\n        \"description\": \"Bed3 adding\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/type",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get producers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"BRW\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add producer with bed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"BRW\",\n        \"beds\": [\n\t        {\n\t        \"name\": \"Kurczaczek\",\n\t        \"soft\": false,\n\t        \"weight\": 12.5,\n\t        \"productionDate\": \"2017-11-11\",\n\t        \"countOfSheets\": 3\n\t    \t}\n    \t]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"BRW\",\n        \"beds\": [\n\t        {\n\t        \"name\": \"Kurczaczek\",\n\t        \"soft\": false,\n\t        \"weight\": 12.5,\n\t        \"productionDate\": \"2017-11-11\",\n\t        \"countOfSheets\": 3\n\t    \t}\n    \t]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostSheets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer/mostSheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer",
+						"mostSheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "most amount of pillows",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer/mostSheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer",
+						"mostSheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "many pillows (n)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restejbjpademo/api/producer/mostSheets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restejbjpademo",
+						"api",
+						"producer",
+						"mostSheets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
