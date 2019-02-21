@@ -1,0 +1,1492 @@
+{
+	"info": {
+		"_postman_id": "88d3faf7-2e56-467e-a135-1dbcc567ca5f",
+		"name": "projekt_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Type add",
+			"item": [
+				{
+					"name": "Add type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Type1\",\n\t\"description\": \"white xl\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type"
+							]
+						},
+						"description": "Adding only type"
+					},
+					"response": []
+				},
+				{
+					"name": "Add type2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Type2\",\n\t\"description\": \"blue l\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type"
+							]
+						},
+						"description": "Adding only type"
+					},
+					"response": []
+				},
+				{
+					"name": "Add type3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Type3\",\n\t\"description\": \"black m\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type"
+							]
+						},
+						"description": "Adding only type"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bed add",
+			"item": [
+				{
+					"name": "Add bed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6aa161aa-b5f8-44a0-a07e-d4f38a363af9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed1\",\n\t\"isSoft\": true,\n    \"weight\": 191.66,\n    \"productionDate\": \"2018-01-01\",\n    \"countOfSheets\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed2\",\n\t\"isSoft\": true,\n    \"weight\": 192.66,\n    \"productionDate\": \"2018-02-01\",\n    \"countOfSheets\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed3\",\n\t\"isSoft\": false,\n    \"weight\": 193.66,\n    \"productionDate\": \"2018-03-01\",\n    \"countOfSheets\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bed with type add",
+			"item": [
+				{
+					"name": "Add bed with type1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6aa161aa-b5f8-44a0-a07e-d4f38a363af9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed11\",\n\t\"isSoft\": true,\n    \"weight\": 191.66,\n    \"productionDate\": \"2018-01-01\",\n    \"countOfSheets\": 1,\n    \"type\": {\"id\": 1}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with type2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed12\",\n\t\"isSoft\": true,\n    \"weight\": 192.66,\n    \"productionDate\": \"2018-02-01\",\n    \"countOfSheets\": 2,\n    \"type\": {\"id\": 2}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with type3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed13\",\n\t\"isSoft\": false,\n    \"weight\": 193.66,\n    \"productionDate\": \"2018-03-01\",\n    \"countOfSheets\": 3,\n    \"type\": {\"id\": 3}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bed with prod add",
+			"item": [
+				{
+					"name": "Add bed with prod1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6aa161aa-b5f8-44a0-a07e-d4f38a363af9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed21\",\n\t\"isSoft\": true,\n    \"weight\": 191.66,\n    \"productionDate\": \"2018-01-01\",\n    \"countOfSheets\": 1,\n    \"type\": {\"id\": 1},\n    \"producers\": [{\"name\": \"producer1\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with prod2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed22\",\n\t\"isSoft\": true,\n    \"weight\": 192.66,\n    \"productionDate\": \"2018-02-01\",\n    \"countOfSheets\": 2,\n    \"type\": {\"id\": 2},\n    \"producers\": [{\"name\": \"producer2\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with prod3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed23\",\n\t\"isSoft\": false,\n    \"weight\": 193.66,\n    \"productionDate\": \"2018-03-01\",\n    \"countOfSheets\": 3,\n    \"type\": {\"id\": 3},\n    \"producers\": [{\"name\": \"producer3\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producer add",
+			"item": [
+				{
+					"name": "Add producer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"producer1\",\n\"beds\": [{\"name\": \"Bed21\"}]\n} "
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer"
+							]
+						},
+						"description": "Adding only producer"
+					},
+					"response": []
+				},
+				{
+					"name": "Add producer2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"producer2\",\n\"beds\": [{\"name\": \"bed22\"}]\n} "
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer"
+							]
+						},
+						"description": "Adding only producer"
+					},
+					"response": []
+				},
+				{
+					"name": "Add producer3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"producer3\",\n\"beds\": [{\"name\": \"bed23\"}]\n} "
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer"
+							]
+						},
+						"description": "Adding only producer"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bed with pillow add",
+			"item": [
+				{
+					"name": "Add bed with pillow1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6aa161aa-b5f8-44a0-a07e-d4f38a363af9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed4\",\n\t\"isSoft\": true,\n    \"weight\": 191.66,\n    \"productionDate\": \"2018-01-01\",\n    \"countOfSheets\": 1,\n    \"type\": {\"id\": 1},\n    \"producers\": [{\"name\": \"producer1\"}],\n    \"pillows\": [{\"name\": \"pillow1\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with pillow2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed4=5\",\n\t\"isSoft\": true,\n    \"weight\": 195.66,\n    \"productionDate\": \"2018-05-01\",\n    \"countOfSheets\": 2,\n    \"type\": {\"id\": 2},\n    \"producers\": [{\"name\": \"producer2\"}],\n    \"pillows\": [{\"name\": \"pillow2\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add bed with pillow3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Bed5\",\n\t\"isSoft\": true,\n    \"weight\": 195.66,\n    \"productionDate\": \"2018-05-01\",\n    \"countOfSheets\": 3,\n    \"type\": {\"id\": 3},\n    \"producers\": [{\"name\": \"producer3\"}],\n    \"pillows\": [{\"name\": \"pillow3\"}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pillow add",
+			"item": [
+				{
+					"name": "Add pillow",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"pillow1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow"
+							]
+						},
+						"description": "Adding only pillow"
+					},
+					"response": []
+				},
+				{
+					"name": "Add pillow2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"pillow2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow"
+							]
+						},
+						"description": "Adding only pillow"
+					},
+					"response": []
+				},
+				{
+					"name": "Add pillow3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"pillow3\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow"
+							]
+						},
+						"description": "Adding only pillow"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Bed",
+			"item": [
+				{
+					"name": "Get bed by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all beds",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Type",
+			"item": [
+				{
+					"name": "Get type by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Pillow",
+			"item": [
+				{
+					"name": "Get Pillow",
+					"item": [
+						{
+							"name": "Ger pillow by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/restejbjpademo/api/pillow/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"restejbjpademo",
+										"api",
+										"pillow",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all pillows",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"restejbjpademo",
+										"api",
+										"pillow"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Ger pillow by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all pillows",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Producer",
+			"item": [
+				{
+					"name": "Get producer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all producers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Bed",
+			"item": [
+				{
+					"name": "Delete bed by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed",
+								"1"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all beds",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed",
+								""
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Type",
+			"item": [
+				{
+					"name": "Delete type by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type",
+								"1"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all types",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/type/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"type",
+								""
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Pillow",
+			"item": [
+				{
+					"name": "Delete pillow by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow",
+								"1"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all pillows",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/pillow/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"pillow",
+								"1"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Producer",
+			"item": [
+				{
+					"name": "Delete producer by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed",
+								"13"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete all producers",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/bed/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"bed",
+								"13"
+							]
+						},
+						"description": "Adding Bed with foreign keys"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advanced",
+			"item": [
+				{
+					"name": "Most sheets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer/mostSheets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer",
+								"mostSheets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Many pillows",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/restejbjpademo/api/producer/manyPillows",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restejbjpademo",
+								"api",
+								"producer",
+								"manyPillows"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

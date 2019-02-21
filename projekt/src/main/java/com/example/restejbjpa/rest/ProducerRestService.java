@@ -40,7 +40,7 @@ public class ProducerRestService {
 	}
 	
 	@GET
-	@Path("/mostColorfull")
+	@Path("/mostSheets")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Producer getMostColorfull(){
 		Producer retrieved = bm.findMostColorfullProducer();
